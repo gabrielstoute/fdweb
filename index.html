@@ -3,85 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portafolio de Gabriel Stoute, desarrollo web y diseño gráfico."
-    />
-    <meta
-      name="keywords"
-      content="HTML, CSS, desarrollo web, diseño gráfico, portafolio"
-    />
-    <meta name="author" content="Gabriel Stoute" />
-    <meta name="robots" content="index, follow" />
-
     <title>Gabriel Stoute | Portafolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/index.css" />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #000000;
+        font-family: "Work Sans", sans-serif;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        max-width: 1000px;
+        flex-wrap: wrap;
+      }
+
+      .left {
+        text-align: right;
+        margin-right: 2rem;
+      }
+
+      .left p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .left p.name {
+        font-weight: 700;
+        color: #000;
+      }
+
+      .right {
+        font-size: 14vw;
+        font-weight: 900;
+        line-height: 0.85;
+        text-align: left;
+        letter-spacing: -4px;
+        word-break: break-word;
+      }
+
+      section {
+        padding: 4rem 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .project {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .project img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      .link-404 {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        font-size: 0.8rem;
+        color: #888;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .link-404:hover {
+        color: #000;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .left {
+          text-align: left;
+          margin: 0 0 2rem 0;
+        }
+
+        .right {
+          font-size: 30vw;
+          letter-spacing: -3px;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <header>
-      <h1 class="titulo"><i class="fas fa-sun"></i> Gabriel Stoute</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
-          </li>
-          <li>
-            <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
-          </li>
-          <li>
-            <a href="mailto:gabri.andres23@gmail.com"
-              ><i class="fas fa-paper-plane"></i> Escríbeme</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section id="inicio">
-        <h2 class="anim-title">Sobre Mí <i class="fas fa-code"></i></h2>
-        <img
-          src="https://ik.imagekit.io/gabrielstoute/default-image.jpg?updatedAt=1739970621936"
-          alt="Imagen externa"
-          class="anim-img"
-        />
-        <p class="anim-text">
-          Bienvenido a mi portafolio. Aquí encontrarás mi trabajo en desarrollo
-          web y diseño gráfico.
-        </p>
-      </section>
-
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <p>¡Sígueme en mis redes sociales!</p>
-        <div class="contacto">
-          <a href="https://www.instagram.com/" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://www.linkedin.com/" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
+    <!-- Hero / Presentación -->
+    <section class="hero">
+      <div class="container">
+        <div class="left">
+          <p class="name">Gabriel Stoute</p>
+          <p>Estudiante de Diseño y Desarrollo Web</p>
+          <p>2025</p>
         </div>
-      </section>
-    </main>
+        <div class="right">
+          <div>PORT</div>
+          <div>FO</div>
+          <div>LIO</div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2025 Gabriel Stoute. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Sobre mí -->
+    <section>
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Gabriel Stoute, estudiante de Diseño y Desarrollo Web. Mi trabajo se
+        enfoca en crear experiencias visuales limpias, funcionales y modernas.
+        Este portafolio reúne algunos de mis proyectos más destacados.
+      </p>
+    </section>
+
+    <!-- Proyecto 1 -->
+    <section class="project">
+      <h2>GREEN BITES</h2>
+      <img
+        src="https://ik.imagekit.io/gabrielstoute/Screenshot%202025-05-13%20at%209.44.39%E2%80%AFPM.png?updatedAt=1747166093747"
+        alt="Proyecto 1"
+      />
+      <p>
+        Green Bites es una app movil de un restaurantes de ensaladas. Me
+        encargue de hacer el diseño del app.
+      </p>
+    </section>
+
+    <!-- Proyecto 2 -->
+    <section class="project">
+      <h2>JOT DOWN MAGAZINE</h2>
+      <img
+        src="https://ik.imagekit.io/gabrielstoute/Disen%CC%83o%20sin%20ti%CC%81tulo.png?updatedAt=1747166093494"
+        alt="Proyecto 2"
+      />
+      <p>
+        Ilustraciones realizadas para tres artículos de la revista Jot Down.
+      </p>
+    </section>
+
+    <!-- Proyecto 3 -->
+    <section class="project">
+      <h2>MONOVÉ</h2>
+      <img
+        src="https://ik.imagekit.io/gabrielstoute/Screenshot%202025-05-13%20at%209.47.41%E2%80%AFPM.png?updatedAt=1747166093686"
+        alt="Proyecto 3"
+      />
+      <p>App movil/laptop y ipad creada para una marca de calcetines.</p>
+    </section>
+
+    <!-- Enlace a página 404 -->
+    <a class="link-404" href="404.html">Ir a página 404</a>
   </body>
 </html>
